@@ -3,6 +3,7 @@
   "displayName": ".NET User Secrets",
   "description": "Open .NET user secrets files directly from .csproj context menu",
   "version": "0.1.0",
+  "author": "Eric Siebeneich <eric.siebeneich@improving.com>",
   "engines": {
     "vscode": "^1.80.0"
   },
