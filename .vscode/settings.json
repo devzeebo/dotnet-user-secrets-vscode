@@ -1,0 +1,30 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit",
+    "source.fixAll.oxc": "explicit"
+  },
+  "explorer.fileNesting.enabled": true,
+  "oxc.enable": true,
+  "oxc.flags": {
+    "fix_kind": "all"
+  },
+  "[javascript][typescript][javascriptreact][typescriptreact][json][jsonc]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[csharp]": {
+    "editor.defaultFormatter": "muhammad-sammy.csharp"
+  },
+  "csharp.format.enable": true,
+  "explorer.fileNesting.patterns": {
+    "*.cs": "${basename}.*.cs"
+  },
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/*.tsbuildinfo": true,
+    "**/obj": true,
+    "**/bin": true
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "dotnet-user-secrets",
+  "displayName": ".NET User Secrets",
+  "description": "Open .NET user secrets files directly from .csproj context menu",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "dotnet-user-secrets.openUserSecrets",
+        "title": "Manage User Secrets"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "dotnet-user-secrets.openUserSecrets",
+          "when": "resourceExtname == .csproj",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "oxlint src"
+  },
+  "devDependencies": {
+    "@types/node": "^24.x",
+    "@types/vscode": "^1.104.0",
+    "@types/xml2js": "^0.4.14",
+    "oxlint": "^1.19.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "xml2js": "^0.6.2"
+  }
+}
